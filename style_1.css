@@ -1,0 +1,238 @@
+body{
+    width:100%;
+    height:1000px;
+    margin:0;
+    padding:0;
+}
+.product_layout{
+    width:80%;
+    margin: 0 auto;
+    height:70%;
+    display: flex;
+   
+   
+}
+.product_name p{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: open sans;
+}
+.product_price p{
+    font-size: 18px;
+    font-family: open sans;
+}
+.product_info p{
+    font-size: 16px;
+    font-family: open sans;
+}
+.product_img {
+    width: 40%;
+    /* text-align: center; */
+  
+}
+.product_img img{
+    width: 85%;
+    height: 70%;
+}
+.nav_main{
+    width: 100%;
+    background-color: black;
+    display: block;
+    height: 5%;
+}
+.nav_item{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left:25%;
+    top:25%;
+}
+.nav_item li{
+    text-decoration: none;
+    list-style: none;
+    color:white;
+    font-weight: bold;
+    font-family: open sans;
+}
+.nav_mobile{
+    display: none;
+    opacity:0;
+    transition: all linear 0.2s;
+}
+#nav_mobile_check{
+    display: none;
+}
+.nav_times i{
+    font-size: 12px;
+    position: absolute;
+    left:90%;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width:63.9375em){
+    .product_layout{
+        flex-direction: column-reverse;
+        width: 80%;
+        /* position: absolute;
+        top:15%;
+        left: 5%; */
+       
+    }
+    .product_img img{
+        width: 100%;
+        height: 100%;
+    }
+    .product_img {
+        width: 100%;
+        text-align: center;
+      
+    }
+    .product_info{
+        display: none;
+    }
+    .product_price{
+        background: #ffffffaa;
+    }
+    .nav_bar {
+        display: block;
+        transition: all linear 0.2s;
+    }
+   
+    .nav_bar i{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top:2%;
+    }
+    #nav_mobile_check{
+     display: none;
+    }
+    .nav_mobile{
+        width: 30%;
+        height: 100%;
+        position: fixed;
+        background-color: white;
+        top:0;
+        z-index: 5;
+        transform: translateX(-100%);
+        transition: all linear 0.6;
+        opacity: 1;
+    }
+    .nav_mobile ul{
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .nav_mobile ul li{
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+        font-family: open sans;
+        font-size: 10px;
+        margin:10% ;
+    }
+    .nav_overlay{
+        background-color: rgb(0,0,0,0.2);
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left: 0;
+        z-index: 1;
+        display: none;
+    }
+    .nav_item{
+        display: none;
+    }
+    #nav_mobile_check:checked~.nav_overlay{
+        display: block;
+        animation-name: nar_overlay;
+        animation-duration: 0.5s;
+        opacity: 1;
+    }
+    #nav_mobile_check:checked~.nav_mobile{
+        display: block;
+        animation-name: nar_bar;
+        animation-duration: 0.5s;
+        transform: translateX(0%);
+    }
+}
+@keyframes nar_bar {
+    from { transform: translateX(-50%);
+   }
+    to { transform: translateX(0%);
+   }
+  }
+  @keyframes nar_overlay{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+  }
+
+body{
+    background-color: black;
+  }
+  .nav{
+    width: 100%;
+    height:100px;
+    background-color: white;
+    display: none;
+  
+  }
+  @media only screen and (max-width:740px) {
+    .nav{
+        display: block;
+        width: 100%;
+        height:8%;
+        position: fixed;
+        bottom: 0;
+       
+        
+    }
+    .navitem{
+        display: flex;
+        text-align: center;
+        justify-content:space-evenly ;
+        
+         
+    }
+    .navcontent{
+      font-family: open sans;
+      transform: translateY(20%);
+      transition: all 0.5s;
+     height: 100%;
+     width: 25%;
+      width: 25%;
+      font-weight: bold;
+    
+    }
+    .navcontent ion-icon{
+        font-size: 30px;
+
+    }
+    /* .navchoose{
+        width: 20%;
+        height: 10%;
+        background-color: pink;
+        position: fixed;
+        bottom:0;
+        border-radius: 100%;
+       
+    } */
+    .navcontent:focus{
+        /* transform: translateY(-30%); */
+        background-color: rebeccapurple;
+    }
+  }
+
+  

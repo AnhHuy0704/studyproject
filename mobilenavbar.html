@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_1.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Mobile navbar</title>
+</head>
+<body>
+        
+        <div class="nav">
+           
+            <div class="navitem">
+                
+                <div  onclick="chooseitem(event)" class="navcontent navtransform">
+                        <ion-icon  class="navicon" name="home-outline"></ion-icon>
+                        <p>Home</p>                
+                </div>
+                <div   onclick="chooseitem(event)"  class="navcontent">
+                    <ion-icon class="navicon" name="person-outline"></ion-icon>
+                    <p>Account</p>                
+                </div>
+                <div  onclick="chooseitem(event)"  class="navcontent">
+                    <ion-icon class="navicon" name="chatbox-ellipses-outline"></ion-icon>
+                    <p>Chat</p>                
+                </div>
+            
+                <div onclick="chooseitem(event)"   class="navcontent">
+                    <ion-icon class="navicon" name="settings-outline"></ion-icon>
+                    <p>Setting</p>                
+                </div>
+            </div>
+        </div> 
+</body>
+</html>
+<script>
+    var listnav=document.querySelectorAll(".navicon");
+    var listnavcontent=document.querySelectorAll(".navcontent");
+    function chooseitem(event){
+        for(var i=0;i<listnavcontent.length;i++){
+            
+           
+        }
+    }
+</script>
